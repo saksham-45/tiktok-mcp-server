@@ -1,0 +1,40 @@
+{
+  "name": "tiktok-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for the official TikTok Content Posting and Display APIs - publish videos, save drafts, poll publish status, and read your account and video data, all LLM-controlled",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "tiktok-mcp-server": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "auth": "tsx src/auth-cli.ts",
+    "clean": "rm -rf dist"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tiktok",
+    "content-posting-api",
+    "display-api"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "axios": "^1.7.9",
+    "express": "^4.21.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
